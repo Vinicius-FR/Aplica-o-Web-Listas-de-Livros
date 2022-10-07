@@ -15,8 +15,8 @@ namespace Alura.ListaLeitura.App.Mvc
             //rota padrão: /<Classe>Logica/Metodo
             //{classe}/{metodo}
 
-            var classe = Convert.ToString(context.GetRouteValue("classe"));
-            var nomeMetodo = Convert.ToString(context.GetRouteValue("metodo"));
+            var classe = context.GetRouteValue("classe").ToString();
+            var nomeMetodo = context.GetRouteValue("metodo").ToString();
 
             var nomeCompleto = $"Alura.ListaLeitura.App.Logica.{classe}Logica";
 
